@@ -20,9 +20,6 @@ jobs:
       - run: |
              pwd
              ls
-             cd evkmimxrt1064_bee
-             pwd
-             ls
              echo "hello1"
              echo "hello2"
              mkdir /tmp/ws
