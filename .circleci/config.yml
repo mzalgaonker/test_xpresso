@@ -21,7 +21,7 @@ jobs:
              pwd
              echo "hello1"
              echo "hello2"
-             cd $HOME/$CIRCLECI_PROJECT_REPONAME
+             echo $HOME/$CIRCLECI_PROJECT_REPONAME
              export IDE=/usr/local/mcuxpressoide/ide/mcuxpressoide
              $IDE -nosplash --launcher.suppressErrors -application org.eclipse.cdt.managedbuilder.core.headlessbuild -data /root -import $HOME/$CIRCLECI_PROJECT_REPONAME -build all
           
