@@ -19,6 +19,7 @@ jobs:
       - checkout
       - run: |
              pwd
+             ls
              echo "hello1"
              echo "hello2"
              echo $HOME/$CIRCLECI_PROJECT_REPONAME
