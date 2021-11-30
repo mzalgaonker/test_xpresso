@@ -17,12 +17,11 @@ jobs:
     # See: https://circleci.com/docs/2.0/configuration-reference/#steps
     steps:
       - checkout
-      - run:
-          name: "Say hello"
-          command: pwd
-                   cd $HOME/$CIRCLECI_PROJECT_REPONAME
-                   export IDE=/usr/local/mcuxpressoide/ide/mcuxpressoide
-                   $IDE -nosplash --launcher.suppressErrors -application org.eclipse.cdt.managedbuilder.core.headlessbuild -data /workspace -import . -build all
+      - run: |
+             pwd
+             cd $HOME/$CIRCLECI_PROJECT_REPONAME
+             export IDE=/usr/local/mcuxpressoide/ide/mcuxpressoide
+             $IDE -nosplash --launcher.suppressErrors -application org.eclipse.cdt.managedbuilder.core.headlessbuild -data /workspace -import . -build all
           
 
 # Invoke jobs via workflows
