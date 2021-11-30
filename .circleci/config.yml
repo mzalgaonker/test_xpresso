@@ -22,9 +22,9 @@ jobs:
              ls
              echo "hello1"
              echo "hello2"
-             echo $HOME/$CIRCLECI_PROJECT_REPONAME
+             mkdir /tmp/ws
              export IDE=/usr/local/mcuxpressoide/ide/mcuxpressoide
-             $IDE -nosplash --launcher.suppressErrors -application org.eclipse.cdt.managedbuilder.core.headlessbuild -import evkmimxrt1064_bee -build all
+             $IDE -nosplash --launcher.suppressErrors -application org.eclipse.cdt.managedbuilder.core.headlessbuild -data /tmp/ws -import evkmimxrt1064_bee -build all
           
 
 # Invoke jobs via workflows
