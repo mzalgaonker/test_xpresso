@@ -22,9 +22,10 @@ jobs:
              ls
              echo "hello1"
              echo "hello2"
+             ls -l /root/project/evkmimxrt1064_bee
              mkdir /tmp/ws
              export IDE=/usr/local/mcuxpressoide/ide/mcuxpressoide
-             $IDE -nosplash --launcher.suppressErrors -application org.eclipse.cdt.managedbuilder.core.headlessbuild -data /tmp/ws -import /root/project/evkmimxrt1064_bee -build all
+             $IDE -nosplash --launcher.suppressErrors -application org.eclipse.cdt.managedbuilder.core.headlessbuild -data "/tmp/ws" -import "/root/project/evkmimxrt1064_bee" -build all
           
 
 # Invoke jobs via workflows
